@@ -64,7 +64,7 @@ def forgot_password(request):
             reset = PasswordReset.objects.create(user=user)
             link = (f"http://127.0.0.1:8000/accounts/reset-password/{reset.token}/")
             send_mail("Reset Password",link,"ankitbohra660@gmail.com",[email])
-            messages.success( request,"Password reset link email par send kar diya gaya hai.")
+            messages.success( request,"The password reset link has been sent to your email.")
         else:
             messages.error(request,"Email not found.")
     return render( request,"accounts/forgot_password.html")

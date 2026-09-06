@@ -10,12 +10,11 @@
     <!-- DESKTOP SIDEBAR (Visible on md and above) -->
     <aside class="hidden md:flex flex-col w-64 bg-[var(--bg-card)] border-r border-gray-200 shrink-0">
         <div class="h-16 flex items-center px-6 border-b border-gray-100">
-            <a href="{% url 'home' %}" class="text-xl font-bold flex items-center gap-2 text-[var(--text-heading)]">
-                <span class="w-8 h-8 rounded-lg bg-[var(--pink)] flex items-center justify-center text-white">
-                    <i class="fas fa-book-open text-sm"></i>
-                </span>
-                <span>Book<span class="text-[var(--pink)]">Store</span></span>
-            </a>
+            <a href="{% url 'customer_dashboard' %}" class="flex items-center">
+    <img src="{% static 'img/logo/logo.png' %}"
+         alt="BookStore Logo"
+         class="h-16 w-auto object-contain">
+</a>
         </div>
 
         <nav class="flex-1 overflow-y-auto p-4 space-y-1">
