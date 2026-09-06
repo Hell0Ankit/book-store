@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Secure Checkout - Literati Store{% endblock %}
+{% block title %}Checkout | Sonu Book Store | Discover Your Next Story {% endblock%}
 
 {% block content %}
 <div class="section-full-width bg-[var(--white)] border-b border-gray-100 py-6">
@@ -111,7 +111,7 @@
                             <h4 class="text-xs font-bold text-[var(--text-heading)] truncate">{{ items.book.title }}</h4>
                             <span class="text-[10px] text-gray-400 font-medium">Qty: {{ items.quantity }}</span>
                         </div>
-                        <span class="text-xs font-extrabold text-[var(--text-heading)] whitespace-nowrap">{{ items.subtotal }}</span>
+                        <span class="text-xs font-extrabold text-[var(--text-heading)] whitespace-nowrap">₹ {{ items.subtotal }}</span>
                     </div>
                     {% endfor %}
 
@@ -124,7 +124,7 @@
                     
                     <div class="flex justify-between items-baseline pt-1">
                         <span class="text-sm font-bold text-[var(--text-heading)]">Grand Cumulative Total</span>
-                        <span class="text-xl font-extrabold text-[var(--mint)]">{{cart.total}}</span>
+                        <span class="text-xl font-extrabold text-[var(--mint)]">₹ {{cart.total}}</span>
                     </div>
                 </div>
 
